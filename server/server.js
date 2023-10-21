@@ -2,12 +2,12 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import dbConnection from './config/mongoose.js';
-import { getStocks } from './controllers/stock.js';
 import routes from './routes/index.js';
 dotenv.config();
 
 const app = express();
 
+// connect to mongodb
 dbConnection();
 
 app.use(express.json({ limit: '30mb' }));

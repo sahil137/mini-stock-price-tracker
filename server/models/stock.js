@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const stockSchema = new mongoose.Schema({
-  stockName: String,
+  symbol: String,
   price: Number,
 });
 
