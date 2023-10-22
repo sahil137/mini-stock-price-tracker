@@ -54,16 +54,15 @@ const StockTracker = () => {
   }, [selectedStock, stocks]);
 
   return (
-    <div className=" flex flex-col items-center justify-center gap-5">
+    <div className="flex flex-col items-center justify-center gap-5">
+      <h2>Price Updates every 60 seconds</h2>
       <select
         name="stocks"
         id="stocks"
         className="w-56"
         onChange={(e) => setSelectedStock(e.target.value)}
       >
-        <option value="">
-          Select a stock from the list (Updates every 60 secs)
-        </option>
+        <option value="">Select a stock from the list</option>
         {stocks.map((stock) => (
           <option value={stock.symbol} key={stock.symbol}>
             {stock.symbol}
