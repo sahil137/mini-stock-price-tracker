@@ -14,13 +14,15 @@ const StockTracker = () => {
     null
   );
   async function fetchStocks() {
-    const response = await axios.get("http://localhost:8000/stocks/all");
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_ROUTE}/stocks/all`
+    );
     setStocks(response.data.stocks);
   }
 
   async function fetchUpdatedStockPrice() {
     const updatedStocks = await axios.get(
-      "http://localhost:8000/stocks/update-stocks"
+      `${process.env.NEXT_PUBLIC_API_ROUTE}/stocks/update-stocks`
     );
     const stock = updatedStocks.data.stocks.filter(
       (stock: any) => stock.symbol === selectedStock

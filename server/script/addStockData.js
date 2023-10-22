@@ -16,10 +16,14 @@ const initialStockData = [
   { symbol: 'NFLX', price: 600.55 },
 ];
 
-mongoose.connect('mongodb://localhost/stocks', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose
+  .connect('Put your mongo url here', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('Connected to Database :: Mongo DB'))
+  .catch((err) => console.log('Error in connecting to DataBase', err));
+mongoose.set('strictQuery', true);
 
 async function addMockData() {
   try {
