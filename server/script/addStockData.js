@@ -13,7 +13,6 @@ const initialStockData = [
   { symbol: 'NVDA', price: 325.5 },
   { symbol: 'FB', price: 340.67 },
   { symbol: 'AMD', price: 109.84 },
-  { symbol: 'GOOG', price: 2767.23 },
   { symbol: 'NFLX', price: 600.55 },
 ];
 
